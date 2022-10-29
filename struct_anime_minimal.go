@@ -1,4 +1,4 @@
-package structs
+package shikimori
 
 type AnimeInformationMinimal struct {
 	Id      int    `json:"id"`

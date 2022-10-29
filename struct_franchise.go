@@ -1,4 +1,4 @@
-package structs
+package shikimori
 
 type Franchise struct {
 	Links []struct {

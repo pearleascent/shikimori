@@ -1,4 +1,4 @@
-package structs
+package shikimori
 
 type Related struct {
 	Relation        string `json:"relation"`

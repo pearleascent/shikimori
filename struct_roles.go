@@ -1,4 +1,4 @@
-package structs
+package shikimori
 
 type Roles struct {
 	Roles        []string `json:"roles"`
