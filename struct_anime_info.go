@@ -44,35 +44,35 @@ type AnimeInformation struct {
 		Name  string `json:"name"  bson:"name"`
 		Value int    `json:"value"  bson:"value"`
 	} `json:"rates_statuses_stats" bson:"rates_statuses_stats"`
-	UpdatedAt     time.Time   `json:"updated_at"  bson:"updated_at"`
-	NextEpisodeAt interface{} `json:"next_episode_at"  bson:"next_episode_at"`
-	Fansubbers    []string    `json:"fansubbers"  bson:"fansubbers"`
-	Fandubbers    []string    `json:"fandubbers"  bson:"fandubbers"`
-	Licensors     []string    `json:"licensors"  bson:"licensors"`
+	UpdatedAt     time.Time   `json:"updated_at" bson:"updated_at"`
+	NextEpisodeAt interface{} `json:"next_episode_at" bson:"next_episode_at"`
+	Fansubbers    []string    `json:"fansubbers" bson:"fansubbers"`
+	Fandubbers    []string    `json:"fandubbers" bson:"fandubbers"`
+	Licensors     []string    `json:"licensors" bson:"licensors"`
 	Genres        []struct {
-		Id      int    `json:"id"  bson:"id"`
-		Name    string `json:"name"  bson:"name"`
-		Russian string `json:"russian"  bson:"russian"`
-		Kind    string `json:"kind"  bson:"kind"`
-	} `json:"genres"  bson:"genres"`
+		Id      int    `json:"id" bson:"id"`
+		Name    string `json:"name" bson:"name"`
+		Russian string `json:"russian" bson:"russian"`
+		Kind    string `json:"kind" bson:"kind"`
+	} `json:"genres" bson:"genres"`
 	Studios []struct {
-		Id           int    `json:"id"  bson:"id"`
-		Name         string `json:"name"  bson:"name"`
+		Id           int    `json:"id" bson:"id"`
+		Name         string `json:"name" bson:"name"`
 		FilteredName string `json:"filtered_name"  bson:"filtered_name"`
-		Real         bool   `json:"real"  bson:"real"`
-		Image        string `json:"image"  bson:"image"`
-	} `json:"studios"  bson:"studios"`
+		Real         bool   `json:"real" bson:"real"`
+		Image        string `json:"image" bson:"image"`
+	} `json:"studios" bson:"studios"`
 	Videos []struct {
-		Id        int    `json:"id"  bson:"id"`
-		Url       string `json:"url"  bson:"url"`
-		ImageUrl  string `json:"image_url"  bson:"image_url"`
-		PlayerUrl string `json:"player_url"  bson:"player_url"`
-		Name      string `json:"name"  bson:"name"`
-		Kind      string `json:"kind"  bson:"kind"`
-		Hosting   string `json:"hosting"  bson:"hosting"`
-	} `json:"videos"  bson:"videos"`
+		Id        int    `json:"id" bson:"id"`
+		Url       string `json:"url" bson:"url"`
+		ImageUrl  string `json:"image_url" bson:"image_url"`
+		PlayerUrl string `json:"player_url" bson:"player_url"`
+		Name      string `json:"name" bson:"name"`
+		Kind      string `json:"kind" bson:"kind"`
+		Hosting   string `json:"hosting" bson:"hosting"`
+	} `json:"videos" bson:"videos"`
 	Screenshots []struct {
-		Original string `json:"original"  bson:"original"`
-		Preview  string `json:"preview"  bson:"preview"`
-	} `json:"screenshots"  bson:"screenshots"`
+		Original string `json:"original" bson:"original"`
+		Preview  string `json:"preview" bson:"preview"`
+	} `json:"screenshots" bson:"screenshots"`
 }
