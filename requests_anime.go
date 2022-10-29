@@ -4,6 +4,21 @@ import (
 	"encoding/json"
 )
 
+func (c *Client) GetAnimeList(page, limit int, order string) ([]AnimeInformationMinimal, error) {
+	res, resErr := c.makeRequest(getArray("animes", page, limit, order))
+	if resErr != nil {
+		return []AnimeInformationMinimal{}, resErr
+	}
+
+	var animeInfo []AnimeInformationMinimal
+	jsonErr := json.Unmarshal(res, &animeInfo)
+	if jsonErr != nil {
+		return []AnimeInformationMinimal{}, jsonErr
+	}
+
+	return animeInfo, nil
+}
+
 func (c *Client) GetAnimeInformation(id int) (AnimeInformation, error) {
 	res, resErr := c.makeRequest(getByID("animes", id))
 	if resErr != nil {

@@ -2,6 +2,10 @@ package shikimori
 
 import "strconv"
 
+func getArray(entry string, page, limit int, order string) string {
+	return "https://shikimori.one/api/" + entry + "?page=" + strconv.Itoa(page) + "&limit=" + strconv.Itoa(limit) + "&order=" + order
+}
+
 func getByID(entry string, id int) string {
 	return "https://shikimori.one/api/" + entry + "/" + strconv.Itoa(id)
 }

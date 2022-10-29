@@ -7,6 +7,21 @@ import (
 	"time"
 )
 
+func TestAnimeList(t *testing.T) {
+	time.Sleep(500 * time.Millisecond)
+
+	c := shikimori.Init(&http.Client{})
+	info, err := c.GetAnimeList(1, 50, "id")
+
+	if err != nil {
+		t.Error("Request error:", err)
+	}
+
+	if len(info) != 50 {
+		t.Error("Wrong data response data passed")
+	}
+}
+
 func TestAnimeInformation(t *testing.T) {
 	time.Sleep(500 * time.Millisecond)
 
