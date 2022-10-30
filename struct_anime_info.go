@@ -3,7 +3,7 @@ package shikimori
 import "time"
 
 type AnimeInformation struct {
-	ID      int    `json:"id"  bson:"id"`
+	Id      int    `json:"id"  bson:"id"`
 	Name    string `json:"name"  bson:"name"`
 	Russian string `json:"russian"  bson:"russian"`
 	Image   struct {
