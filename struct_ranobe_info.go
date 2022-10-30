@@ -47,5 +47,8 @@ type RabobeInformation struct {
 		Russian string `json:"russian" bson:"russian"`
 		Kind    string `json:"kind" bson:"kind"`
 	} `json:"genres" bson:"genres"`
-	Publishers []string `json:"publishers" bson:"publishers"`
+	Publishers []struct {
+		Id   int    `json:"id"`
+		Name string `json:"name"`
+	} `json:"publishers"`
 }
