@@ -15,7 +15,7 @@ type Franchise struct {
 		Date     int    `json:"date"`
 		Name     string `json:"name"`
 		ImageUrl string `json:"image_url"`
-		Url      string `json:"urls.go"`
+		Url      string `json:"url"`
 		Year     int    `json:"year"`
 		Kind     string `json:"kind"`
 		Weight   int    `json:"weight"`
